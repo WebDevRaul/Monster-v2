@@ -2,6 +2,9 @@
 
 :root {
   --primary: rgb(210, 149, 218);
+  --muted: rgb(206, 212, 218);
+  --grey: rgb(70, 80, 90);
+  --white: rgb(255, 255, 255);
   --spacing: 2px;
   --border: 4px;
 }
@@ -10,9 +13,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--grey);
 }
 main {
-  min-height: calc(100vh - 112px);
+  min-height: calc(100vh - 105px);
 }
 
 body {
@@ -28,4 +32,84 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   text-decoration: none;
+  color: var(--primary);
+}
+a:focus, input:focus {
+  outline: none;
+}
+
+
+/* //////////////////////////// */
+/* ////////// Navbar ////////// */
+/* //////////////////////////// */
+
+.navbar {
+  margin-left: 5%;
+  margin-top: 10px;
+}
+
+/* //////////////////////////// */
+/* ////////// Footer ////////// */
+/* //////////////////////////// */
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+/* ////////////////////////// */
+/* ////////// Home ////////// */
+/* ////////////////////////// */
+
+.search-monster {
+  display: flex;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 6px 12px;
+  font-size: 1.1em;
+  background-color: var(--white);
+  border: 1px solid var(--muted);
+  border-radius: var(--border);
+}
+.monster {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.card {
+  margin: 10px 0;
+  background-color: var(--primary);
+  border-radius: var(--border);
+}
+.card p {
+  text-align: center;
+  margin: 5px 0;
+}
+.card :nth-child(2) {
+  font-weight: bold;
+}
+/* //////////////////////////////// */
+/* ////////// Responsive ////////// */
+/* //////////////////////////////// */
+
+@media (max-width: 991px) {
+  .navbar {
+    text-align: center;
+    margin-left: 0;
+    color: red;
+  }
+}
+
+@media (max-width: 576px) {
+  main {
+    min-height: calc(100vh - 127px);
+  }
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-text {
+    margin: 5px 0;
+  }
 }
