@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Kumar+One+Outline|Lato&display=swap');
+
+:root {
+  --primary: rgb(210, 149, 218);
+  --spacing: 2px;
+  --border: 4px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  min-height: calc(100vh - 112px);
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.4;
+  font-size: 1rem;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Kumar One Outline', cursive;
+  margin-bottom: 1.25rem;
+  letter-spacing: var(--spacing);
+}
+
+a {
+  text-decoration: none;
+}
